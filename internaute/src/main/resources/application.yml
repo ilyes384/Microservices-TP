@@ -1,0 +1,27 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:internaute-db
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  cloud:
+    config:
+      uri: http://localhost:8888 # Adresse de votre Config Server
+      import: "optional:configserver:" # Utilisation correcte de configserver avec optional pour éviter l'erreur
+      import-check:
+        enabled: false # Désactiver la vérification de l'importation de configuration
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

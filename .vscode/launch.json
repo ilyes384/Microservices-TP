@@ -1,0 +1,55 @@
+{
+	"configurations": [
+		{
+			"type": "java",
+			"name": "Spring Boot-EurekaServerApplication<eureka-server>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "tp.microservice.eureka_server.EurekaServerApplication",
+			"projectName": "eureka-server",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env"
+		},
+		{
+			"type": "java",
+			"name": "Spring Boot-InternauteApplication<internaute>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "io.internaute.internaute.InternauteApplication",
+			"projectName": "internaute",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env",
+			"vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=17399 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=internaute"
+		},
+		{
+			"type": "java",
+			"name": "Spring Boot-TicketApplication<ticket>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "io.ticket.ticket.TicketApplication",
+			"projectName": "ticket",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env"
+		},
+		{
+			"type": "java",
+			"name": "Spring Boot-EvenementApplication<evenement>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "io.evenement.evenement.EvenementApplication",
+			"projectName": "evenement",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env"
+		},
+		{
+			"type": "java",
+			"name": "Spring Boot-ConfigServerApplication<config-server>",
+			"request": "launch",
+			"cwd": "${workspaceFolder}",
+			"mainClass": "tp.microservice.config_server.ConfigServerApplication",
+			"projectName": "config-server",
+			"args": "",
+			"envFile": "${workspaceFolder}/.env"
+		}
+	]
+}

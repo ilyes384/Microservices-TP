@@ -1,0 +1,13 @@
+server:
+  port: 8888
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AlaaBrahim/tp2-microservice-tickets-evenements.git
+          clone-on-start: true
+          search-paths: configs
+    compatibility-verifier:
+      enabled: false
